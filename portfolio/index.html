@@ -15,36 +15,52 @@
         </h1>
     </header>
         <nav>
-
+            <input type="checkbox" id="toggler">
+            <label for="toggler">
+              <div></div>
+              <div></div>
+              <div></div>
+            </label>
         <ul>
-           <li>O mnie</li> 
-           <li>Umiejętności</i></li>
-           <li>Kontakt</li>
+            <li>
+                <a href="#about">O MNIE</a>
+              </li>
+              <li>
+                <a href="#skills">UMIĘTNOŚCI</a>
+              </li>
+              <li>
+                <a href="#contact">KONTAKT</a>
+              </li>
         </ul>
     </nav>
 
     <header>
-        <h2>O mnie:</h2>
+        
 
     </header>
         
-    <main> 
+    <main id="about" class="wrapper">
+        <header>
+            <h2>O mnie:</h2>
+        </header> 
         <img src="Pies.jpg" alt= "PERSONAL IMAGE"/>
     </main>
 
 
-    <article>
+    <article id="skills" class="wrapper">
         <header>
-            <h3>UMIEJĘTNOŚCI:</h3>
+            <h2>UMIEJĘTNOŚCI:</h2>
 
 
 
         </header>
-        <table border="2">
+        <table border="4">
             <thead>
+                <tr>
                 <th>LP.</th>
                 <th>TECHNOLOGIA</th>
                 <th>BIEGŁOŚĆ</th>
+            </tr>
             </thead>
             <tbody>
                 <tr>
@@ -63,12 +79,13 @@
             
 
         </table>
-        <header>
-            <h4>KONTAKT</h4>
-        </header>
+        
     </article>
-    
-    <section>
+ 
+    <section id="contact" class="wrapper">
+        <header>
+            <h2>KONTAKT</h2>
+        </header>
         <Form>
             <input type="email" placeholder="email" >
             <input type="text" placeholder="temat">

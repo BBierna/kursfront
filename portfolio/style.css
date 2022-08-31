@@ -1,3 +1,13 @@
+:root{
+    --foreground-dark:#34128F;
+    --foreground-light:#9C78FF;
+    --background-dark:#8F8518;
+    --background-light:#DBD051;
+  
+  }
+
+
+
 body{
     background-color: rgb(135, 206, 235);
     margin:0;

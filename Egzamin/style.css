@@ -1,0 +1,16 @@
+table{
+    width:50%;
+    
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 70px 4px;
+    padding-left: .20rem;
+}
+
+    th{color: rgb(66, 2, 2);
+        padding:.9rem;
+    }
+    td{background-color:rgb(207, 188, 140);
+    padding: .4rem;}
+
+   
+   

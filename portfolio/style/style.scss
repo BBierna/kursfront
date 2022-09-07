@@ -6,9 +6,17 @@
     --background-color: #991313;
   
   }
-*{box-sizing: border-box;}
+*{box-sizing: border-box;
+  a{
+    text-decoration: none;
+  
+  }
+  .material-symbols-outlined{
+    margin:.20rem;
+  }
+}
 
-
+html{ scroll-behavior: smooth; }
 body{
     background-color: var(--background-light);
     margin:0;
@@ -38,6 +46,8 @@ body{
   #toggler:checked ~ ul{
     right:0;
   }
+  
+
   
   
   label{
@@ -93,9 +103,8 @@ body{
     transition:.5s;
     flex-direction: column;
   }
-a{
-  text-decoration: none;
-}
+
+
   li{
   
     top:0;

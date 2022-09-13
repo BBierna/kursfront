@@ -34,10 +34,7 @@ const views = [
     // podmieniamy wartość h2 na wartość z elementu tablicy views zależnego od argumentu index
     h2.innerHTML = views[index].name
   
-    const img = document.querySelector("img")
-    img.src = "img/" + views[index].src
-  
-    img.alt = views[index].alt
+    
   }
   
   // definicja zmiennej, która oznacza obecnie wyświetlany slajd

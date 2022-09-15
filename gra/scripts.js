@@ -142,7 +142,7 @@ const modal = {
       height:80vh;
       left:10vw;
       top:10vh;
-      background:red;
+      background:brown;
       display:flex;
       flex-direction:column;
       align-items:center;
@@ -152,7 +152,7 @@ const modal = {
     document.body.append(modal.dom)
 
     const h1 = document.createElement("h1")
-    h1.innerHTML = "H1"
+    h1.innerHTML = "Naciśnij niebieskie pole i zacznij przygodę !"
     modal.dom.append(h1)
 
     const button = document.createElement("button")

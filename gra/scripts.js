@@ -82,6 +82,9 @@ const game = {
     // zakończenie gry z pozytywnym wynikiem
     game.buttons.meta.addEventListener('mousemove', game.over)
 
+    // jeśli nakierujesz myszkę na gamePlane po starcie, to przegrywasz grę
+    // gamePlane.addEventListener('mousemove', game.gamePlaneListener)
+
     gamePlane.addEventListener('mousemove', game.gamePlaneListener)
     // wyciągamy jako wall każdą ścianę osobno
     for(const wall of game.buttons.walls){
@@ -98,23 +101,19 @@ const game = {
   gamePlaneListener(e){
     game.over(false)
   },
-  // metoda wywołująca się po nakierowaniu myszką na metę
-  metaTrigger(){
-    // zakończ grę z pozytywnym wynikiem
-    game.over(true)
-  },
+  
   // zakończ grę - wynik zależy od result - może być true - wygrana,
   // lub false - przegrana
   over(result){
     // wyświetl odpowiedni komunikat
     if(result){
-      console.log("YOU WIN")
+      modal.show("YOU WIN")
     }else{
-      console.log("YOU LOSE")
+      modal.show("YOU LOSE")
     }
     // zdejmij słuchacza z pola meta (przestajemy nasłuchiwać kursor 
     // na polu meta)
-    game.buttons.meta.removeEventListener('mousemove', game.metaTrigger)
+    game.buttons.meta.removeEventListener('mousemove', game.over)
 
     gamePlane.removeEventListener('mousemove', game.gamePlaneListener)
     for(const wall of game.buttons.walls){
@@ -127,7 +126,7 @@ const game = {
 }
 // przygotuj grę
 // ta metoda wywołuje się po każdym odświeżeniu strony
-game.init()
+
 
 
 
@@ -137,6 +136,7 @@ game.init()
 // KOMUNIKATY 
 const modal = {
   dom : document.createElement("div"),
+  h1 : document.createElement("h1"),
   init(){
     modal.dom.style.cssText = `
       border:10px dashed red;

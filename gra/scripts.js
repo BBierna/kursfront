@@ -79,11 +79,14 @@ const game = {
     // zablokuj możliwość rozpoczęcia nowej gry
     game.buttons.start.onclick = ""
     // "nasłuchuj" kursora na polu meta (jeśli się tam pojawi, wywoła 
-    // metodę game.metaTrigger)
-    game.buttons.meta.addEventListener('mousemove', game.metaTrigger)
+    // zakończenie gry z pozytywnym wynikiem
+    game.buttons.meta.addEventListener('mousemove', game.over)
 
     gamePlane.addEventListener('mousemove', game.gamePlaneListener)
+    // wyciągamy jako wall każdą ścianę osobno
     for(const wall of game.buttons.walls){
+        // jeśli Twój kursor jest na klasie .wall, to nie wyzwalaj
+      // żadnych innych słuchaczy (eventListenerów)
       wall.addEventListener('mousemove', game.wallListener)
     }
 

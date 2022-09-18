@@ -107,9 +107,10 @@ const game = {
   over(result){
     // wyświetl odpowiedni komunikat
     if(result){
-      modal.show("YOU WIN")
+      modal.show("Wygrałeś! ;D")
     }else{
-      modal.show("YOU LOSE")
+      modal.show("Przegrałeś ;(")
+      
     }
     // zdejmij słuchacza z pola meta (przestajemy nasłuchiwać kursor 
     // na polu meta)
@@ -150,23 +151,29 @@ const modal = {
       flex-direction:column;
       align-items:center;
       justify-content:center;
+      display:none;
+      text-align:center;
+      border-radius:10px;
     `
-      // display:none;
+      
     document.body.append(modal.dom)
 
-    const h1 = document.createElement("h1")
-    h1.innerHTML = "Naciśnij niebieskie pole i zacznij przygodę !"
-    modal.dom.append(h1)
+    modal.h1.innerHTML = "H1"
+    modal.dom.append(modal.h1)
 
     const button = document.createElement("button")
     button.innerHTML = "OK"
+    button.style.cssText = ` 
+      padding:1rem 4rem;
+      border-radius:1rem;
+      cursor:pointer;
+    `
     button.onclick = function () { modal.hide() }
     modal.dom.append(button)
-
-
   },
-  show() { 
+  show(text) { 
     modal.dom.style.display = "flex";
+    modal.h1.innerHTML = text
   },
   hide(){
     modal.dom.style.display = "none";
@@ -174,8 +181,12 @@ const modal = {
 
 }
 
+
 modal.init()
-// modal.show()
+modal.show('Kliknij na niebieski kafelek aby rozpocząć niezwykłą przygodę! Pamiętaj jednak, że zielona droga to twoja jedyna szansa na wspaniałe życie')
+
+
+game.init()
 
 
 

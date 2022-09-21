@@ -25,13 +25,14 @@ function timeConverter(UNIX_timestamp){
   // fetch('https://api.openweathermap.org/data/2.5/forecast?lat=12.3714&lon=1.5197&appid=04d03c358e8933ac6823da54c340c97b&units=metric&lang=pl')
   .then(res => res.json())
   .then(res => {
-    // console.log(res)
+    // colognsole.(res)
     // USTAWIAMY MAIN HEADER
     document.querySelector(".city h2").innerText = res.city.name
     document.querySelector("img").src = "https://countryflagsapi.com/svg/"+res.city.country
     document.querySelector(".city .sunrise").innerText = timeConverter(res.city.sunrise);
     document.querySelector(".city .sunset").innerText = timeConverter(res.city.sunset);
   
+    //console.log ("RES LISTAA: ", res.list)
     makeWeatherCube(res.list[0])
   })
   

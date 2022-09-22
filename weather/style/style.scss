@@ -1,11 +1,52 @@
+*{box-sizing: border-box;}
+:root{
+  --light-bg-color: royalblue;
+  --dark-bg-color: rgb(36, 39, 46);
+  --light-font-color: #000;
+  --dark-font-color: #fff;
+}
 body{
-  background-color: royalblue;
+  color: var(--light-font-color);
+  background-color: var(--light-bg-color);
   margin:0;
+  >header {
+    padding:.4rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .outerSwitch{
+      border:2px solid rgba(173, 65, 65, 0.577);
+      border-radius:2rem ;
+      background-color: #9a905d4b;
+      cursor:pointer;
+      .switch{
+        width:3.5rem;
+        display:flex;
+        transition:.5s;
+        &.dark{
+          justify-content: flex-end;
+        }
+        .innerSwitch{
+          width:2rem;
+          height:2rem;
+          border:3px solid rgb(183, 124, 124);
+          background-color:rgb(237, 183, 183);
+          border-radius:50%;
+        }
+      }
+    }
+    input, button{
+      padding:.5rem;
+    }
+    button{
+      cursor:pointer;
+    }
+  }
   main{
-    border:5px dashed red;
     header{
+      padding:1rem;
+      background-color:rgba(255, 255, 255, 0.342);
       .city{
-        border:2px dashed blue;
         display:flex;
         justify-content: space-between;
         align-items: center;
@@ -30,15 +71,13 @@ body{
       #range{
         width:40%;
         transform: scale(2);
-        margin:2rem 0;
-        
+        margin:2rem 0 0 0;
         background-color: #9a905d;
       }
       .cube{
         padding: 2rem 0;
         margin-bottom: 2rem;
-
-        border:5px dashed rgb(249, 188, 8);
+        background-color:rgba(0, 0, 0, 0.613);
         text-align: center;
         width:80%;
         h3,h4{
@@ -50,16 +89,28 @@ body{
             justify-content: center;
           }
         }
-
-// SELEKTOR {
-//  WŁAŚCIWOŚĆ 1: WARTOŚĆ
-//  WŁAŚCIWOŚĆ 2: WARTOŚĆ
-// }
-
       }
     }
-
-
+  }
+  footer{
+    padding:1rem;
+    p{
+      text-align:right;
+    }
   }
 
+  &.dark{
+    color: var(--dark-font-color);
+    background-color: var(--dark-bg-color);
+  }
+
+  @media(min-width:768px){
+    // >header,
+    main{
+      header{
+
+        padding:2rem 30%;
+      }
+    }
+  }
 }

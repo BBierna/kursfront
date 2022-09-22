@@ -72,7 +72,8 @@ getLatLonDependOfName()
 
 document.addEventListener("keydown", e => {
   console.log(e)
-  if(e.key == "Enter"){getLatLonDependOfName()
+  if(e.key == "Enter"){
+    getLatLonDependOfName()
   }
 })
 
@@ -86,3 +87,15 @@ document.addEventListener("wheel", e => { // info o wydarzeniu jest w zmiennej e
   // uaktualnij informacje wewnątrz .cube
   changeCubeInfo(document.querySelector("#range").value)
 })
+
+let lightTheme = true;
+document.querySelector(".switch").onclick = () => {
+  lightTheme = !lightTheme
+  if(lightTheme){
+    document.querySelector("body").classList.remove('dark')
+    document.querySelector(".switch").classList.remove('dark')
+  }else{
+    document.querySelector("body").classList.add('dark')
+    document.querySelector(".switch").classList.add('dark')
+  }
+}

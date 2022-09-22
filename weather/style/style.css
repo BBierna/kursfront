@@ -1,12 +1,12 @@
 body {
-    background-color: royalblue;
+    background-color: rgb(196, 225, 65);
     margin: 0;
   }
   body main {
     border: 2px dashed red;
   }
   body main header .city {
-    border: 2px dashed blue;
+    border: 2px dashed rgb(55, 0, 255);
     display: flex;
     justify-content: space-between;
     align-items: center;

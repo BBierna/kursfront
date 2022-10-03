@@ -1,1 +1,1 @@
-console.log(Bartosz + Biernacki);
+console.log('Hello Bartosz Biernacki')

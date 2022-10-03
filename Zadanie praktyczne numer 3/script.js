@@ -1,1 +1,1 @@
-
+console.log(Bartosz + Biernacki);

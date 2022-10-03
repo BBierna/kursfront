@@ -1,0 +1,19 @@
+.bodyHeader{
+    background-color: var(--background-dark);
+    border:3px dashed rgb(70, 55, 73);
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    top:0;
+  }
+
+  body{
+    background-color: aqua;
+    margin: 10px;;
+    min-height: 1000px;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+}
+
+h1{color: crimson;}
+

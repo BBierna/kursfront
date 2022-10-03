@@ -19,7 +19,7 @@ body{
   
 .bodyHeader{
     background-color: var(--background-dark);
-    display:flex;
+    
     justify-content: space-between;
     align-items: center;
     position:sticky;
@@ -42,7 +42,7 @@ body{
   
   
   label{
-    /* border:5px dashed red; */
+  
     width:2rem;
     height:2rem;
     position:absolute;
@@ -82,7 +82,7 @@ body{
   }
   
   ul{
-    background-color: var(--background-dark);
+    background-color: var(--background-color);
     list-style-type: none;
     margin:0;
     padding:.5rem;
